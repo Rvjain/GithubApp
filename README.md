@@ -26,5 +26,10 @@
 ### Installation
 1. Clone the repo and run the app on phone or emulator.
 OR
-1. Install using the apk provided in the root folder   
+1. Install using the apk provided in the root folder
+
+### Screenshot
+![Alt Text](pics/demo.gif)
+
+
 
