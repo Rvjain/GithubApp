@@ -9,6 +9,10 @@ import javax.inject.Inject
 class ContributorsUseCase @Inject constructor(
     private val contributorsRepo: ContributorsRepository
 ) {
+
+    /**
+     * Get Contributors takes in [owner] and [repo] and returns list of [ContributorModel]
+     */
     suspend fun getContributors(owner: String, repo: String) : List<ContributorModel> {
         return withContext(Dispatchers.IO) {
             contributorsRepo.getContributors(owner = owner, repo = repo)?.map {

@@ -37,7 +37,7 @@ fun HomeScreen(
         ) {
             when(repoState) {
                 is BaseViewState.ERROR -> {
-
+                    Text(repoState.message)
                 }
                 is BaseViewState.LOADING -> {
                     CircularProgressIndicator()

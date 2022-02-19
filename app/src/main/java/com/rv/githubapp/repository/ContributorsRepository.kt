@@ -8,6 +8,11 @@ import javax.inject.Inject
 class ContributorsRepository @Inject constructor(
     private val api: GithubApi
 ) {
+    /**
+     * Fetches the contributors for the [owner] and [repo]
+     * OnError we log and return an empty list
+     * @return [List] of [ContributorsResponse.ContributorsResponseItem]
+     */
     suspend fun getContributors(owner: String, repo: String) : List<ContributorsResponse.ContributorsResponseItem>? {
         val response = api.getContributors(owner = owner, repo = repo)
         return if (response.isSuccessful) {
